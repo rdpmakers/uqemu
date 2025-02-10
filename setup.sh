@@ -16,7 +16,6 @@ udocker import --clone --tocontainer --name=qemu qemu.tar
 udocker setup --execmode=F4 qemu
 
 # Setup
-mkdir
 cat > ~/.udocker/container*/qemu/ROOT/boot.sh << EOF
 
 #!/bin/bash
@@ -32,7 +31,6 @@ fi
 
 EOF
 
-clear
 
 cat > start_container.sh << EOF
 
@@ -46,7 +44,7 @@ chmod +x start_container.sh
 echo "wait for 15 second, udocker may still extracting it"
 sleep 15 #udocker still extracting it
 
-clear
+
 
 echo "Setup complete. You can now run the container with: ./start_container.sh"
 echo "Script will auto destroy."
