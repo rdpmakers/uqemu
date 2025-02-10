@@ -13,7 +13,7 @@ export XDG_RUNTIME_DIR=$HOME
 echo "Installing the container"
 cat qemu_part_* > qemu.tar
 udocker import --clone --tocontainer --name=qemu qemu.tar
-udocker setup --execmode=F4 qemu
+udocker setup --execmode=P2 qemu
 
 # Setup
 cat > ~/.udocker/containers/qemu/ROOT/boot.sh << EOF
