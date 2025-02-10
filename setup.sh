@@ -38,7 +38,8 @@ cat > start_container.sh << EOF
 export XDG_RUNTIME_DIR=$HOME
 export PATH=`pwd`/udocker-1.3.17/udocker:$PATH
 udocker setup --execmode=P2 qemu
-sleep 1
+echo "fixing..."
+sleep 3
 udocker setup --execmode=F4 qemu
 udocker run qemu /bin/bash /boot.sh
 EOF
