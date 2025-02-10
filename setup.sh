@@ -16,7 +16,7 @@ udocker import --clone --tocontainer --name=qemu qemu.tar
 udocker setup --execmode=F4 qemu
 
 # Setup
-cat > ~/.udocker/container*/qemu/ROOT/boot.sh << EOF
+cat > ~/.udocker/containers/qemu/ROOT/boot.sh << EOF
 
 #!/bin/bash
 cd /qemu
